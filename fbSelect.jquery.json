@@ -1,0 +1,29 @@
+{
+	"name": "fbSelect",
+	"title": "fbSelect",
+	"description": "Transforms a standard HTML select input into a toggleable button that is fully customizable",
+	"keywords": [
+		"select",
+		"option",
+		"toggle",
+		"button",
+		"word",
+		"click",
+		"tap"
+	],
+	"version": "0.1.0",
+	"author": {
+		"name": "fatbattk",
+		"url": "http://git.io/nLpK2w"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/fatbattk/fbSelect/blob/master/LICENSE"
+		}
+	],
+	"homepage": "http://git.io/nLpK2w",
+	"dependencies": {
+		"jquery": ">=1.6"
+	}
+}
