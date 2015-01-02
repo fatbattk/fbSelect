@@ -14,7 +14,7 @@ Handles `<optgroup>`, disabled `<option>`, multiple `<select>`, blank/ default v
 1. Include CSS + jquery + javascript files.
 ```html
 <link rel="stylesheet" href="jquery.fbs.min.css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="jquery.fbs.min.js"></script>
 ```
 2. Start fbSelect.
@@ -24,8 +24,8 @@ $('select').fbSelect();
 
 ## Options
 
-* **spanClass** (*default: 'fbs'*) - CSS class name of created `<span>` that *replaces* `<select>`.
-* **spanClasses** (*default: ['fbs1','fbs2','fbs3']*) - array of CSS class names to be toggled between each click on `<span>`.
+* **bClass** (*default: 'fbs'*) - CSS class name of created `<button>` that *replaces* `<select>`.
+* **bClasses** (*default: ['fbs1','fbs2','fbs3']*) - array of CSS class names to be toggled between each click on `<button>`.
 * **skipNoValue** (*default: false*) - set true to skip `<option>` with none/ blank values. `(e.g.- <option></option>)`.
 
 ## Requires
