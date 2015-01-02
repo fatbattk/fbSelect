@@ -1,0 +1,29 @@
+{
+  "name": "fbselect",
+  "version": "0.1.1",
+  "description": "Transforms a standard HTML select input into a toggleable button that is fully customizable.",
+  "main": "jquery.fbs.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fatbattk/fbSelect.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "select",
+    "option",
+    "toggle",
+    "button",
+    "word",
+    "click",
+    "tap"
+  ],
+  "author": "fatbattk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fatbattk/fbSelect/issues"
+  },
+  "homepage": "https://github.com/fatbattk/fbSelect"
+}

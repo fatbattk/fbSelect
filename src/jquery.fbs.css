@@ -3,8 +3,8 @@
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 .fbs{
+	border:0;
 	border-radius:10px;
-	padding:2px 6px;
 	-moz-transition-property:background-color,color,width;
 	-moz-transition-duration:0.5s;
 	-moz-transition-timing-function:ease-in-out;

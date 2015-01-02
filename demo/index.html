@@ -22,7 +22,7 @@
 <body>
 <form method="get">
 	<!--- Example 1 -->
-	<pre class="code">$(''#eg1').fbSelect();</pre>
+	<pre class="code">$('#eg1').fbSelect();</pre>
 
 	↑ JS code used for example shown above.
 	<br>All highlighted text are toggleable (click/tap) → <select id="eg1" name="eg1" title="eg1"><option value="1">This is awesome</option><option value="2">Kinda cool</option><option value="3">No bad</option><option value="4">In denial</option></select>.
@@ -31,7 +31,7 @@
 	<!--- Example 2 & 3 -->
 	<pre class="code">// toggling will skip options with no value set or have no values.
 // also default value set with selected attribute.
-$('#eg2,#eg3').fbSelect({ skipNoValue: true, spanClasses: ['fbs1','fbs3','fbs4'] });</pre>
+$('#eg2,#eg3').fbSelect({ skipNoValue: true, bClasses: ['fbs1','fbs3','fbs4'] });</pre>
 
 	The quick brown <select id="eg2" name="eg2" title="eg2"><optgroup><option>Select one</option><option value="say">fox</option><option value="">chicken</option><option value="croak">frog</option></optgroup><option value="quack">duck</option></select> jumps over the <select id="eg3" name="eg3" title="eg3"><option value="lazy">lazy</option><option value="sleeping" selected>sleeping</option></select> dog.
 	<hr><br>
@@ -39,7 +39,7 @@ $('#eg2,#eg3').fbSelect({ skipNoValue: true, spanClasses: ['fbs1','fbs3','fbs4']
 	<!--- Example 4 -->
 	<pre class="code">// using custom CSS class defined in this file.
 // view page source to see.
-$('#eg4').fbSelect({ spanClasses: ['bg1','bg2'] });</pre>
+$('#eg4').fbSelect({ bClasses: ['bg1','bg2'] });</pre>
 
 	I am a <select id="eg4" name="eg4" title="eg4"><option value="">male</option><option value="21">female</option></select> that loves technology.
 	<hr><br>
@@ -50,18 +50,17 @@ $('#eg4').fbSelect({ spanClasses: ['bg1','bg2'] });</pre>
 <br>fbSelect on <a href="http://git.io/nLpK2w" target="_blank">GitHub</a>.
 <br>@fatbattk
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<!--script src="../dist/jquery.fbs.min.js"></script-->
-<script src="../src/jquery.fbs.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="../dist/jquery.fbs.min.js"></script>
 <script>
 	jQuery(function($){
 		$('#eg1').fbSelect();
 		$('#eg2,#eg3').fbSelect({
 			skipNoValue: true,
-			spanClasses: ['fbs1','fbs3','fbs4']
+			bClasses: ['fbs1','fbs3','fbs4']
 		});
 		$('#eg4').fbSelect({
-			spanClasses: ['bg1','bg2']
+			bClasses: ['bg1','bg2']
 		});
 	});
 </script>

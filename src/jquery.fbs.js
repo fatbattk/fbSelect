@@ -1,12 +1,11 @@
-// fbSelect jquery plugin v 0.1.0 (http://git.io/nLpK2w)
+// fbSelect jquery plugin v 0.1.1 (http://git.io/nLpK2w)
 // by @fatbattk
-// https://github.com/jquery-boilerplate/jquery-patterns/blob/master/patterns/jquery.basic.plugin-boilerplate.js
 ;(function($,window,document,undefined){
 	// default properties.
 	var pluginName = "fbSelect",
 		defaults = {
-			spanClass: "fbs",
-			spanClasses: ['fbs1','fbs2','fbs3','fbs4'],
+			bClass: "fbs",
+			bClasses: ['fbs1','fbs2','fbs3','fbs4'],
 			skipNoValue: false
 		};
 
@@ -38,15 +37,15 @@
 
 		return opText;
 	}
-	function toggClass($span,classes){
-		var ct = ($span.data('counter'))? $span.data('counter') : 0;
+	function toggClass($btn,classes){
+		var ct = ($btn.data('counter'))? $btn.data('counter') : 0;
 
-		$span.toggleClass(classes[ct]);
+		$btn.toggleClass(classes[ct]);
 		ct++;
 		if(classes[ct]==null){
 			ct = 0;
 		}
-		$span.toggleClass(classes[ct]).data('counter',ct);
+		$btn.toggleClass(classes[ct]).data('counter',ct);
 	}
 
 	Plugin.prototype = {
@@ -56,16 +55,16 @@
 				$op1 = ($(':selected',$dd).length)? $(':selected:first',$dd) : $('option:enabled',$dd),
 				ddTitle = ($dd.attr('title'))? $dd.attr('title') : 'Click to toggle between options';
 
-			$dd.hide(0).after('<span class="'+ o.spanClass +' '+ o.spanClasses[0] +'" title="'+ ddTitle +'">'+ $op1.html() +'</span>').find('optgroup option').unwrap();
+			$dd.hide(0).after('<button type="button" class="'+ o.bClass +' '+ o.bClasses[0] +'" title="'+ ddTitle +'">'+ $op1.html() +'</button>').find('optgroup option').unwrap();
 			// set default select option. unwrap bugs out selected selector.
 			$op1.prop('selected',true);
 
-			$dd.next('.'+ o.spanClass).on('click',function(){
+			$dd.next('.'+ o.bClass).on('click',function(){
 				var $this = $(this),
 					newOp = toggOption($this.prev('select:hidden'),o.skipNoValue);
 
 				$this.html(newOp);
-				toggClass($this,o.spanClasses);
+				toggClass($this,o.bClasses);
 			});
 		}
 	};
